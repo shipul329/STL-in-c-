@@ -1,0 +1,37 @@
+/// back() function in string deals with the last character of the string.
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+void solve()
+{
+    string s;
+    cin >> s;
+
+    char last_char = s.back();
+
+    cout << last_char << '\n'; /// shows last character of the string
+
+    s.back()='A'; /// we insert 'A' at the last position of the string
+                  /// in this case previous character will be removed.
+
+    cout << s << '\n';
+}
+
+int32_t main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        solve();
+    }
+    
+    return 0;
+}
