@@ -1,0 +1,44 @@
+    /// lower_bound() return an iterator pointing to the 
+    /// first element in the range which has a equal or first greater value
+    /// which we are finding 
+    
+    
+ #include<bits/stdc++.h>
+    
+ using namespace std;
+    
+ typedef long long ll;
+    
+void solve()
+{
+    ll n;
+    cin >> n;
+
+    vector<ll>v(n);
+
+    for(auto &x:v)
+        cin >> x;
+
+    sort(v.begin(), v.end());
+
+    ll num;
+    cin >> num;
+
+    auto it=lower_bound(v.begin(), v.end(), num);
+
+    cout << *it << '\n';
+}
+
+int32_t main()
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        solve();   
+    }
+    
+    return 0;
+    
+}    
