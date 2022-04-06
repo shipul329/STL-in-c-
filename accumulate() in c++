@@ -1,0 +1,22 @@
+/// accumulate is used to count total sum of an array or a vector 
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int32_t main()
+{
+    int n;
+    cin >> n;
+    
+    vector<int>v(n);
+    
+    for(auto &x:v)
+    cin >> x;
+    
+    int ans=accumulate(v.begin(), v.end(), 0);
+    
+    cout << ans << '\n'; /// total sum
+    
+    return 0;
+}
