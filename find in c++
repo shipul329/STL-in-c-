@@ -1,0 +1,48 @@
+/// find a number in an array where item exist or not if exist then which position
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    
+    vector<int>v(n);
+    
+    for(auto &x:v)
+    cin >> x;
+    
+    int nm;  /// item/number which one we searching
+    cin >> nm;
+    
+    auto it=find(v.begin(), v.end(), nm); 
+    
+    if(it!=v.end())
+    {
+        cout << "YES" << '\n';
+        cout << "Position is : " << it-v.begin()+1 << '\n';
+    }
+    
+    else cout << "Not found" << '\n';
+}
+
+int32_t main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        solve();
+    }
+    
+    return 0;
+}
