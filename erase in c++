@@ -1,0 +1,36 @@
+/// remove characters from a string
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define for0(i, n) for(int i=0; i<n; i++)
+
+typedef long long ll;
+typedef long double ld;
+
+int main()
+{
+    string s;
+    cin >> s;
+    
+    int n;
+    cin >> n;
+    
+    char ch;
+
+    for0(i, s.size())
+    {
+
+        for0(j, n)
+        {
+            cin >> ch;
+
+            s.erase(remove(s.begin(), s.end(), ch), s.end());
+        }
+    }
+
+    cout << s << endl;
+    
+    return 0;
+}
