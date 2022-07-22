@@ -1,0 +1,49 @@
+/// To check a character either a letter or special character
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+#define for0(i, n) for(int i=0; i<n; i++)
+#define all(v) v.begin(),v.end()
+#define nn '\n'
+
+
+void solve()
+{
+    string s;
+    getline(cin, s);
+
+    cout << s.size() << nn; /// size of main string 
+
+    int cnt=0, garb=0;
+
+    for0(i, s.size())
+    {
+        if(isalnum(s[i])) cnt++;
+
+        else garb++;
+    }
+
+    cout << cnt << nn; /// size of alphanumeric characters
+    cout << garb << nn; /// size of special characters
+}
+
+int32_t main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    #ifndef ONLINE_JUDGE
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
+    #endif
+
+    solve();
+
+    return 0;
+}
