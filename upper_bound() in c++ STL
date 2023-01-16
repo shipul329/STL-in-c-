@@ -2,7 +2,7 @@
 /// first element in the range which has a greater value
 /// than which we are finding 
 
-#include<bits.stdc++.h>
+#include<bits/stdc++.h>
 
 using namespace std;
 
